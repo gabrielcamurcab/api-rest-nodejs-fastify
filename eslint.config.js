@@ -31,7 +31,7 @@ export default [
 		},
 		rules: {
 			'semi': ['error', 'always'],
-			'indent': ['error', 'tab']
+			'indent': ['error', 'tab'],
 		}
 	}
 ];
