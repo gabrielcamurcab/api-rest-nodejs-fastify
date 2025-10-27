@@ -7,6 +7,9 @@ const app = fastify();
 
 app.register(cookie);
 
+app.addHook('preHandler', async (request, reply) => {
+	console.log(`${request.method} ${request.url} - ${reply.statusCode}`);
+});
 app.register(transactionsRoutes, {
 	prefix: 'transactions'
 });
