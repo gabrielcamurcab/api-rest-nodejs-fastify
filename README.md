@@ -1,12 +1,15 @@
 # API de Transações Financeiras
 por Gabriel Camurça
 
-## Stacks e Princpais Libs
-- NodeJS
-- Fastify
-- Knex
-- Zod
-- SQLite
+## Tecnologias
+
+- **NodeJS** - Runtime JavaScript
+- **Fastify** - Framework web
+- **Knex** - Query builder para SQL
+- **Zod** - Validação de schemas
+- **SQLite** - Banco de dados
+- **Vitest** - Framework de testes
+- **Supertest** - Testes de integração HTTP
 
 ## Requisitos e Regras de Negócio
 
