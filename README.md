@@ -20,5 +20,5 @@ por Gabriel Camurça
 ### Regras de Negócio
 
 - [x] A transação pode ser do tipo crédito (soma ao valor total) ou débito (subtrai do valor total);
-- [ ] Deve ser possível identificarmos o usuário a cada transação;
-- [ ] O usuário só pode visualizar as transações que ele criou.
+- [x] Deve ser possível identificarmos o usuário a cada transação;
+- [x] O usuário só pode visualizar as transações que ele criou.
