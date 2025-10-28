@@ -94,4 +94,40 @@ describe('Transactions routes', async () => {
 			})
 		);
 	});
+
+	it('should be able to get the summary', async () => {
+		const createCreditTransactionResponse = await request(app.server)
+			.post('/transactions')
+			.send({
+				title: 'New Transaction',
+				amount: 500,
+				type: 'credit'
+			});
+		
+		const cookies = createCreditTransactionResponse.get('Set-Cookie');
+
+		if (!cookies) {
+			throw new Error('No cookies received');
+		}
+
+		const createDebitTransactionResponse = await request(app.server)
+			.post('/transactions')
+			.set('Cookie', cookies)
+			.send({
+				title: 'New Transaction',
+				amount: 250,
+				type: 'debit'
+			});
+
+		const summaryTransactionsResponse = await request(app.server)
+			.get('/transactions/summary')
+			.set('Cookie', cookies)
+			.expect(200);
+
+		expect(summaryTransactionsResponse.body.summary).toEqual(
+			{
+				amount: 250
+			}
+		);
+	});
 });
