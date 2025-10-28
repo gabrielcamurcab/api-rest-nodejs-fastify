@@ -8,7 +8,8 @@
     "start": "node dist/server.js",
     "lint": "eslint src --ext .ts,.js",
     "lint --fix": "eslint src --ext .ts,.js",
-    "knex": "tsx ./node_modules/knex/bin/cli.js"
+    "knex": "tsx ./node_modules/knex/bin/cli.js",
+    "test": "vitest"
   },
   "dependencies": {
     "@fastify/cookie": "^11.0.2",
